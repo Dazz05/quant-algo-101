@@ -47,7 +47,7 @@ class SyntheticDataGenerator:
             high = close * (1 + abs(np.random.normal(0, volatility/2)))
             low = close * (1 - abs(np.random.normal(0, volatility/2)))
             open_price = prices[i-1] if i > 0 else initial_price
-            volume = int(np.random.normal(1000000, 200000))
+            volume = int(abs(np.random.normal(1000000, 200000)))
             
             data.append({
                 'Open': open_price,
@@ -96,7 +96,7 @@ class SyntheticDataGenerator:
             high = close * (1 + abs(np.random.normal(0, 0.01)))
             low = close * (1 - abs(np.random.normal(0, 0.01)))
             open_price = prices[i-1] if i > 0 else initial_price
-            volume = int(np.random.normal(1000000, 200000))
+            volume = int(abs(np.random.normal(1000000, 200000)))
             
             data.append({
                 'Open': open_price,
